@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smooting: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+main {
+  display: flex;
+  width: min(42.8rem, 95%);
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  text-align: center;
+  margin: auto;
+
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+  color: #34355b;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: #34355b;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  margin: 1.4rem 0 2rem;
+}
+
+.screen1 img:hover {
+  cursor: pointer;
+  animation: shake 0.1s infinite;
+}
+
+.phrase {
+  padding: 1rem;
+  background: #e4edf1;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(85, 85, 85, 0.5);
+  margin-top: 1.7rem;
+
+  animation: emerge 1s ease-in;
+}
+
+p {
+  color: #000;
+
+  text-align: center;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.screen2 img {
+  margin: 6.013rem 0 4.313rem 0;
+}
+
+button {
+  color: #fff;
+
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  margin-top: 1.7rem;
+
+  border: none;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  background: #ff9500;
+  width: fit-content;
+  margin: auto;
+
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 3.5rem -0.3rem rgba(142, 27, 171, 1);
+  -moz-box-shadow: 0 0 3.5rem -0.3rem rgba(142, 27, 171, 1);
+  box-shadow: 0 0 3.5rem -0.3rem rgba(142, 27, 171, 1);
+}
+
+button:hover {
+  filter: brightness(0.9);
+  background: #aa6300;
+  transition: background 0.3s;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes emerge {
+  0% {
+    scale: 0;
+    opacity: 0;
+    transform: translateY(600%);
+  }
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
